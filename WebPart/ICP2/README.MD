@@ -4,4 +4,4 @@ Github Link: https://github.com/AishwaryaKotla/WebSpring2022/tree/main/WebPart/I
 
 Pranay Reddy Singireddy
 Email: psgvy@umsl.edu
-Github
+Github: https://github.com/sunnypranay4748/WebSpring2022/tree/main/WebPart/ICP2
