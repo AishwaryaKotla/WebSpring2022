@@ -4,7 +4,7 @@ Email: aknxd@umkc.edu
 
 Partner Name: Pranay Reddy Singireddy
 Email:  psgvy@umsl.edu
-Githublink:  
+Githublink:  https://github.com/sunnypranay4748/WebSpring2022/tree/main/WebPart/ICP1
 
 About My Repository:
 
