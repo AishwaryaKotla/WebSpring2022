@@ -4,13 +4,21 @@
     <!--Importing jquery to do validations-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--Importing the external javascript file-->
-    <script src="js/script.js"></script>
+    <script src="javascript/script.js"></script>
+    <!--Importing bootstrap-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css">
+    <!--Including the css file-->
+    <link rel="stylesheet" href="css/styles.css">
+    
 </head>
 <body class="container-fluid">
+    <br>
+    <br>
+    <h2><i> Game begins. Choose Rock Paper or Scissors !!</i></h2>
+    <br>
+    <br>
 
-    <div class="row" id="content"> 
-
-        <h2>The Game begins. Choose Rock Paper or Scissors</h2>
+    <div class="row" id="content">         
 
         <!--Using bootstrap classes
         "img-fluid" class tells the browser not to expand the  image larger 
@@ -35,11 +43,13 @@
                 <img src="scissors.png" alt="scissors" class="img-fluid">
             </button>
         </div>
-
-        <div>
-            <h6 id="output"></h6>
-        </div>
         
+    </div>
+    <!--This additional task is to display the output of the selections of player1 and player2-->
+    <br>
+    <br>
+    <div>
+        <h1 id="output"></h1>
     </div>
 </body>
 </html>
