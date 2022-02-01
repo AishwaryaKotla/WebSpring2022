@@ -1,0 +1,41 @@
+body{
+    margin-left: 12%;
+    margin-right: 12%;
+    margin-top: 3%;
+}
+h1,h3{
+    color: #747704;
+}
+h2{
+    color: #BCBBBB;
+}
+hr{
+    border: solid #BCBBBB;
+    margin-top: 0;
+}
+a{
+    color: #747704;
+}
+a:hover {
+    color: #BCBBBB;
+}
+#profile{
+    height: 100px;
+    width: 100px;
+}
+#mainImg{
+    width: 1140px;
+    height: 350px;
+}
+.app{
+    height: 300px;
+    width: 555px;
+}
+@font-face{
+    font-family: customFont;
+    src: url(Rambla-Regular.ttf);
+}
+
+div{
+    font-family: customFont;
+}
