@@ -20,9 +20,8 @@ function showUser(user) {
     $("#name").text(user.name == null ? "null" : user.name);
     $("#loginId").text(user.id);
     $("#git").attr("href",user.html_url);
-    $("#followers").text(user.followers);
-    $("#creationDate").text(user.created_at);
-    console.log($("#git").attr("href"));
+    console.log("below are the user details");
+    console.log(user);
 }
 
 function noSuchUser(username) {

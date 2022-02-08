@@ -7,7 +7,7 @@ header {
 }
 
 body {
-  background-image: url("2155719.jpg");
+  background-image: url("backgroundimage.jpg");
   font-family: Helvetica, Arial, sans-serif;
   border-top: 5px solid #4c4066;
   margin: 0px auto;
@@ -47,12 +47,10 @@ body {
   background-color: purple;
   text-decoration: none;
   color: white;
-  font-width: bold;
 }
 
 .search {
   text-align: center;
-  margin: 50px auto;
 }
 
 h1 {
