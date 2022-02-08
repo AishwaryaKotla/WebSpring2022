@@ -48,9 +48,9 @@ $(document).ready(function () {
                 showUser(JSON.parse(response.responseText));
                 //else display suitable message
             } 
-            //else {
-              //  noSuchUser(username);
-           // }
+            else {
+               noSuchUser(username);
+            }
         }
     })
 });
