@@ -1,12 +1,51 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Calculator</title>
-  // 1. write Typescript code in "app.component.ts" to work with ToDo list
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-// 2. write html(view) code to display the ToDos
+
+<app-timer></app-timer>
+
+<br><br>
+
+<div class="row" id="todo">
+  <div class="col-sm-offset-3 col-md-6">
+    <div class="input-group">
+      <input id="addItem" type="text" class="form-control" [(ngModel)]="newItem" placeholder="Add Item to list">
+      <span class="input-group-addon" id="basic-addon2" (click)="submitNewItem()">Add Item</span>
+    </div>
+    <br>
+
+
+    <table class="table table-responsive">
+      <thead>
+      <tr>
+        <th class="text-center">To-do list</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of items; let i = index" class="text-center">
+        <td id="{{i}}">
+          {{item}}
+        </td>
+        <td class="text-right">
+          <div class="btn-group">
+            <button class="bt2"  (click)="deleteItem(i)"><i class="fa fa-trash"></i></button>
+            <button class="bt"  (click)="completeItem(item,i)"><i class="glyphicon glyphicon-thumbs-up"></i></button>
+
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    
+
+  </div>
+</div>
 
 </body>
 </html>
