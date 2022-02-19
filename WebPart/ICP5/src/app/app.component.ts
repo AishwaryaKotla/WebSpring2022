@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'ToDoList';
+  
   // define list of items
   items = ['Task 1', 'Task 2', 'Task 3'];
   counter = 0;
   newItem = '';
-  valid = false;
+  title = 'ToDoList';
 
   // Write code to push new item
   submitNewItem() {
@@ -36,7 +36,7 @@ export class AppComponent {
   deleteItem(i: any) {
 
     this.items.splice(i,1);
-    
+
   }
 
 }
