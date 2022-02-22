@@ -10,9 +10,19 @@
   position: center;
 
 }
+.panel-body {
+  overflow-y: auto;
+  height: 50vh;
+}
+
+
 .desc {
   font-family: Georgia;
   font-size: 17px;
+}
+
+button {
+  color: black;
 }
 
 .thumbnail {
