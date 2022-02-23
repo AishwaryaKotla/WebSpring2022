@@ -3,6 +3,7 @@
     <h2><b>Search for your recipe!!
     </b></h2><br>
     <form>
+
       <div class="form-group">
         <div class="form-group col-lg-6 col-lg-offset-3 input-group">
           <input #recipe class="form-control" placeholder="Recipe name" type="text">
@@ -18,6 +19,7 @@
     </form>
   </div>
 </div><br><br>
+
 <div class="container">
   <div class="row">
     <div class="col-lg-6">
@@ -25,21 +27,27 @@
         <div class="panel-heading"><b>How to make</b></div>
         <div class="panel-body">
           <div *ngFor="let recipe of recipeList" class="list-group">
-            <img src="{{ recipe.image }}" style="">
+            <img src="{{ recipe.image }}">
+
             <h2><b>{{ recipe.label }}</b></h2>
+
             <p>Servings: {{ recipe.yield }} | Calories per serving: {{ recipe.calories.toFixed() }}</p>
             <p>Diet: {{ recipe.dietLabels }}, {{ recipe.healthLabels }}</p>
             <p>Source: <a href="{{ recipe.url }}">{{ recipe.url }}</a> </p>
-            <!-- display list of ingredients -->
+
+            <!-- To display list of ingredients -->
+
             <h3>Ingredients: </h3>
             <div *ngFor="let ingredient of recipe.ingredients" class="list-group-item">
               {{ingredient.text}}
             </div>
+
             <hr>
           </div>
         </div>
       </div>
     </div>
+    
     <div class="col-lg-6">
       <div class="panel panel-default col-6">
         <div class="panel-heading"><b>Where to get</b></div>

@@ -1,5 +1,8 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+
+/* created interface for venue search */
+
 interface VenueSearchResponse {
   meta: {};
   response: {
@@ -7,6 +10,9 @@ interface VenueSearchResponse {
     confident: boolean;
   };
 }
+
+/* created interface for recipe search */
+
 interface RecipeSearchResponse {
   count: number;
   from: number;
@@ -15,9 +21,12 @@ interface RecipeSearchResponse {
   q: string;
   to: number;
 }
+/* created interface to track hits*/
+
 interface Hit {
   recipe: Recipe;
 }
+/* Venue interface */
 interface Venue {
   id: string;
   name: string;
@@ -35,6 +44,8 @@ interface Venue {
   referralId: string;
   hasPerk: boolean;
 }
+/* recipe interface */
+
 interface Recipe {
   calories: number;
   dietLabels: string[];
@@ -88,22 +99,17 @@ export class SearchRecipeComponent implements OnInit {
     this.recipeValue = this.recipes.nativeElement.value;
     this.placeValue = this.places.nativeElement.value;
     if (this.recipeValue !== null) {
-      /**
-       * Write code to get recipe
-       */
-      this._http.get('https://api.edamam.com/search?q=' + this.recipeValue + '&app_id=db9927b6'
-        + '&app_key=d08fbd177d03c50acff5e26581f28a75')
+      
+      this._http.get('https://api.edamam.com/search?q=' + this.recipeValue + '&app_id=24992616'
+        + '&app_key=b4d0a13f03a7ec38495042d62b9bf55a')
           .subscribe(({hits}: RecipeSearchResponse) => {
             this.recipeList = hits.map(hit => hit.recipe);
           });
     }
     if (this.placeValue != null && this.placeValue !== '' && this.recipeValue != null) {
       if (this.recipeValue !== '') {
-        /**
-         * Write code to get place
-         */
-        // tslint:disable-next-line:max-line-length
-        this._http.get('https://api.foursquare.com/v2/venues/search?client_id=HVNZDHZ3Y2FFR0ZSADDZBP3N30YEA1DZQYOGG35VCUCBUOT4' + '&client_secret=1QTPX3WSGSUFTO0VAGMNEYEJFPDFQO15RGJ3C5RINYJZATWH&v=20180323&limit=10&near=' + this.placeValue + '&query=' + this.recipeValue).
+        
+        this._http.get('https://api.foursquare.com/v2/venues/search?client_id=5CKU3C4ADVKGOMYCXBZTOY2QTEXXISPNUGFQYRZGOLS4X4AV' + '&client_secret=QAHNC1HSI1VFLK5ULDPOGXBLEB5RQCCYYODNZDCZG1DXF10W&v=20180323&limit=10&near=' + this.placeValue + '&query=' + this.recipeValue).
         subscribe(({response}: VenueSearchResponse) => {
           this.venueList = response.venues;
         });
