@@ -12,7 +12,7 @@
 
         </div>
         <br>
-        <button (click)="getVenues()" class="btn btn primary col-lg-2 col-lg-offset-5 " type="button">Go</button>
+        <button (click)="getVenues()" class="btn col-lg-2 col-lg-offset-5 " type="button">Go</button>
 
       </div>
     </form>
@@ -24,19 +24,19 @@
       <div class="panel panel-default col-6">
         <div class="panel-heading"><b>How to make</b></div>
         <div class="panel-body">
-          <div *ngFor="let recipe of recipeList" class="list-group-item clearfix">
-            <div class="pull-left">
-              <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
-              <a href="{{recipe.url}}" class="list-group-item-text">{{ recipe.url }}</a>
+          <div *ngFor="let recipe of recipeList" class="list-group">
+            <img src="{{ recipe.image }}" style="">
+            <h2><b>{{ recipe.label }}</b></h2>
+            <p>Servings: {{ recipe.yield }} | Calories per serving: {{ recipe.calories.toFixed() }}</p>
+            <p>Diet: {{ recipe.dietLabels }}, {{ recipe.healthLabels }}</p>
+            <p>Source: <a href="{{ recipe.url }}">{{ recipe.url }}</a> </p>
+            <!-- display list of ingredients -->
+            <h3>Ingredients: </h3>
+            <div *ngFor="let ingredient of recipe.ingredients" class="list-group-item">
+              {{ingredient.text}}
             </div>
-
-            <span class="pull-right">
-          <img src="{{recipe.icon}}" style="width: 70px; height: 50px;" align="center"/>
-
-      </span>
-
+            <hr>
           </div>
-
         </div>
       </div>
     </div>
@@ -44,25 +44,21 @@
       <div class="panel panel-default col-6">
         <div class="panel-heading"><b>Where to get</b></div>
         <div class="panel-body">
-
           <div *ngFor="let venue of venueList" class="list-group-item clearfix">
             <div class="pull-left">
-              <h4 class="list-group-item-heading">{{ venue.name }}</h4>
+              <h4 class="list-group-item-heading">{{venue.name}}</h4>
+              <p>{{venue.location.address}}</p>
+              <p>{{venue.location.city}}, {{venue.location.state}} {{venue.location.postalCode}} </p>
+              <p>{{venue.location.country}} </p>
             </div>
-
             <span class="pull-right">
-             <a href="http://maps.google.com/maps?saddr={{currentLat}},{{currentLong}}
+             <a target="_blank" href="http://maps.google.com/maps?saddr={{currentLat}},{{currentLong}}
              &daddr={{venue.location.formattedAddress[0]}},{{venue.location.formattedAddress[1]}},{{venue.location.formattedAddress[2]}}">
                <img src="../../assets/google.png" style="width: 30px; height: 30px;"></a>
-      </span>
-
+            </span>
           </div>
-
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
