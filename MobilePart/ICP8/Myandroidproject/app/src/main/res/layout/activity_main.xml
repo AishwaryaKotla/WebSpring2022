@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/login"
+        android:text="Login Application"
+        android:textColor="@color/white"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_margin="51dp"/>
+
+    <EditText
+        android:id = "@+id/username"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_below="@id/login"
+        android:hint="username"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:layout_margin="12dp"
+        android:padding="15dp"
+        android:inputType = "textPassword" />
+
+    <EditText
+        android:id = "@+id/password"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:hint="password"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:layout_margin="12dp"
+        android:padding="15dp"
+        android:layout_below="@id/username"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:id="@+id/Login"
+        android:hint="Login"
+        android:textColorHint="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        />
+
+
+
+</RelativeLayout>
