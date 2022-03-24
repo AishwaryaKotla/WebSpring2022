@@ -1,0 +1,34 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Pizza Ordering App</string>
+    <string name="name">Name</string>
+
+    <string name="toppings">Toppings: 0</string>
+    <string name="whipped_cream">Whipped Cream</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="pepperoni">Pepperoni</string>
+    <string name="ham">Ham</string>
+    <string name="pineapple">Pineapple</string>
+    <string name="onion">Onion</string>
+    <string name="nonveg">Toppings: Meat</string>
+    <string name="veg">Toppings: Vegetables</string>
+    <string name="summary">Summary</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="order_summary_pepperoni">Add Pepperoni? <xliff:g example="yes" id="addPepperoni">%s</xliff:g></string>
+    <string name="order_summary_ham">Add Ham? <xliff:g example="yes" id="addHam">%s</xliff:g></string>
+    <string name="order_summary_onion">Add Onion? <xliff:g example="yes" id="addOnion">%s</xliff:g></string>
+    <string name="order_summary_pineapple">Add Pineapple? <xliff:g example="yes" id="addPineapple">%s</xliff:g></string>
+
+    <string name="quantity">Quantity: 2</string>
+    <string name="initial_quantity_value">2</string>
+    <string name="order">Place Order</string>
+    <string name="order_summary_name">Name: <xliff:g example="Vijaya" id="name">%s</xliff:g></string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="order_summary_whipped_cream">Add Pepperoni? <xliff:g example="yes" id="addWhippedCream">%s</xliff:g></string>
+    <string name="order_summary_chocolate">Add Ham? <xliff:g example="yes" id="addChocolate">%s</xliff:g></string>
+    <string name="order_summary_quantity">Quantity: <xliff:g example="2" id="quantity">%d</xliff:g></string>
+    <string name="order_summary_total_price">Total: $ <xliff:g example="10" id="price">%.2f</xliff:g></string>
+    <string name="thank_you">Thank you!</string>
+    <string name="too_much_coffee">Please select less than one hundred cups of coffee</string>
+    <string name="too_little_coffee">Please select atleast one cup of coffee</string>
+</resources>
